@@ -59,11 +59,41 @@ const ProjectsPage: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {projects.map(item => (
                         <div key={item.id} className="bg-zinc-900/80 backdrop-blur-sm rounded-lg overflow-hidden shadow-lg border border-zinc-800 transition-all hover:scale-105 hover:border-red-600/50 duration-300 flex flex-col">
-                            <img src={item.imageUrl} alt={item.title} className="w-full h-48 object-cover"/>
+                            {item.link ? (
+                                <a href={item.link} target="_blank" rel="noopener noreferrer" className="block w-full h-48">
+                                    <div
+                                        style={{
+                                            background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)',
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            justifyContent: 'center',
+                                            width: '100%',
+                                            height: '100%',
+                                        }}
+                                    >
+                                        <span style={{ color: 'rgba(255,255,255,0.3)', fontSize: '12px', fontFamily: 'monospace' }}>
+                                            {item.title || 'Project'}
+                                        </span>
+                                    </div>
+                                </a>
+                            ) : (
+                                <div
+                                    className="w-full h-48"
+                                    style={{
+                                        background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                    }}
+                                >
+                                    <span style={{ color: 'rgba(255,255,255,0.3)', fontSize: '12px', fontFamily: 'monospace' }}>
+                                        {item.title || 'Project'}
+                                    </span>
+                                </div>
+                            )}
                             <div className="p-6 flex flex-col flex-grow">
                                 <h3 className="text-xl font-bold mb-2 text-white">{item.title}</h3>
-                                <p className="text-gray-400 text-sm mb-4">{item.description}</p>
-                                <p className="text-gray-300 mb-4 leading-relaxed flex-grow">{item.longDescription ?? item.description}</p>
+                                <p className="text-gray-300 mb-4 leading-relaxed flex-grow">{item.longDescription ?? item.description ?? ''}</p>
                                 <div className="flex flex-wrap gap-2 mb-4">
                                     {item.tags.map(tag => (
                                         <span key={tag} className="bg-zinc-700 text-xs font-semibold px-2 py-1 rounded-full">{tag}</span>

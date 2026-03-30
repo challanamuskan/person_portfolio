@@ -12,6 +12,14 @@ const Intro: React.FC<IntroProps> = ({ onFinished }) => {
   const [userInteracted, setUserInteracted] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
 
+  useEffect(() => {
+    if (userInteracted || animationState !== 'initial') return;
+    const timer = setTimeout(() => {
+      onFinished();
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, [userInteracted, animationState, onFinished]);
+
   const startIntro = () => {
     if (userInteracted || !audioRef.current) return;
     setUserInteracted(true);
@@ -73,6 +81,27 @@ const Intro: React.FC<IntroProps> = ({ onFinished }) => {
       role="button"
       tabIndex={0}
     >
+      <button
+        onClick={(event) => {
+          event.stopPropagation();
+          onFinished();
+        }}
+        style={{
+          position: 'fixed',
+          top: '16px',
+          right: '20px',
+          zIndex: 9999,
+          color: 'white',
+          background: 'transparent',
+          border: 'none',
+          cursor: 'pointer',
+          fontSize: '13px',
+          opacity: 0.6,
+        }}
+      >
+        Skip →
+      </button>
+
       {!userInteracted && (
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white animate-pulse">
           <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 mb-4" viewBox="0 0 20 20" fill="currentColor">

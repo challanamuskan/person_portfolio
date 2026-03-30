@@ -82,10 +82,36 @@ const Hero: React.FC<HeroProps> = ({ onViewResume }) => {
                 <p className="max-w-xl text-sm md:text-base leading-relaxed">
                     {PERSONAL_INFO.bio}
                 </p>
+                <div
+                    style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '8px',
+                        background: 'rgba(255,255,255,0.08)',
+                        borderRadius: '20px',
+                        padding: '6px 14px',
+                        fontSize: '12px',
+                        color: 'rgba(255,255,255,0.7)',
+                        marginTop: '12px',
+                        border: '1px solid rgba(255,255,255,0.12)',
+                    }}
+                >
+                    <span
+                        style={{
+                            width: '7px',
+                            height: '7px',
+                            borderRadius: '50%',
+                            background: '#4ade80',
+                            display: 'inline-block',
+                            boxShadow: '0 0 6px #4ade80',
+                        }}
+                    ></span>
+                    Open to freelance & collaborations
+                </div>
                                 <div style={{ display: 'flex', gap: '32px', marginTop: '24px', flexWrap: 'wrap' }}>
                                     {[
                                         { number: '4', label: 'Live Projects' },
-                                        { number: '83', label: 'Certificates' },
+                                        { number: '83+', label: 'Certificates' },
                                         { number: '6', label: 'IIT / IIM Fests' },
                                         { number: '2', label: 'Countries' },
                                     ].map((stat) => (

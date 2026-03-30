@@ -61,7 +61,19 @@ const Modal: React.FC<ModalProps> = ({ item, onClose }) => {
                 {item.modalStyle === 'achievement' && <AchievementBackground />}
 
                 <div className="relative">
-                    <img src={item.imageUrl.replace('/500/280', '/800/450')} alt={item.title} className="w-full h-auto object-cover" />
+                    <div
+                        className="w-full h-56 md:h-72"
+                        style={{
+                            background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                        }}
+                    >
+                        <span style={{ color: 'rgba(255,255,255,0.3)', fontSize: '12px', fontFamily: 'monospace' }}>
+                            {item.title || 'Project'}
+                        </span>
+                    </div>
                     <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent"></div>
                     <button 
                         onClick={handleClose} 

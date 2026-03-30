@@ -37,8 +37,17 @@ const ContentCard: React.FC<ContentCardProps> = ({ item, onClick, onMouseEnter, 
                 aria-label={`View details for ${item.title}`}
                 onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && onClick()}
             >
-                {/* Base image, always visible */}
-                <img src={item.imageUrl} alt={item.title} className="w-full h-full object-cover" />
+                {/* Gradient placeholder keeps cards consistent and avoids broken/irrelevant stock images */}
+                <div
+                    className="w-full h-full flex items-center justify-center"
+                    style={{
+                        background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)',
+                    }}
+                >
+                    <span style={{ color: 'rgba(255,255,255,0.3)', fontSize: '12px', fontFamily: 'monospace' }}>
+                        {item.title || 'Project'}
+                    </span>
+                </div>
 
                 {/* The Netflix-style info panel that fades in on hover */}
                 <div className={`absolute top-0 left-0 w-full h-full

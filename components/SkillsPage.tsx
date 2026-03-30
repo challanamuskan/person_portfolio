@@ -50,11 +50,22 @@ const SkillsPage: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {skills.map(item => (
                         <div key={item.id} className="bg-zinc-900/80 backdrop-blur-sm rounded-lg overflow-hidden shadow-lg border border-zinc-800 transition-all hover:scale-105 hover:border-red-600/50 duration-300 flex flex-col md:flex-row">
-                            <img src={item.imageUrl} alt={item.title} className="w-full md:w-1/3 h-48 md:h-auto object-cover"/>
+                            <div
+                                className="w-full md:w-1/3 h-48 md:h-auto"
+                                style={{
+                                    background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                }}
+                            >
+                                <span style={{ color: 'rgba(255,255,255,0.3)', fontSize: '12px', fontFamily: 'monospace' }}>
+                                    {item.title || 'Skill'}
+                                </span>
+                            </div>
                             <div className="p-6 flex flex-col flex-grow">
                                 <h3 className="text-xl font-bold mb-2 text-white">{item.title}</h3>
-                                <p className="text-gray-400 text-sm mb-4">{item.description}</p>
-                                <p className="text-gray-300 mb-4 leading-relaxed flex-grow">{item.longDescription ?? item.description}</p>
+                                <p className="text-gray-300 mb-4 leading-relaxed flex-grow">{item.longDescription ?? item.description ?? ''}</p>
                             </div>
                         </div>
                     ))}

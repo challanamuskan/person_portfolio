@@ -1,0 +1,7 @@
+{
+  "name": "Netflix Personal Portfolio",
+  "description": "A personal portfolio website designed with the look and feel of the Netflix interface, showcasing achievements, projects, and skills in a visually engaging format.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

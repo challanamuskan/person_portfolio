@@ -7,7 +7,7 @@
 
 > Netflix-themed personal portfolio built with React + TypeScript + Vite
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-e50914?style=for-the-badge)](https://challanamuskan.vercel.app)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-e50914?style=for-the-badge)](https://muskanchallana.vercel.app)
 [![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react)](https://react.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org)
 [![Vite](https://img.shields.io/badge/Vite-5-646CFF?style=for-the-badge&logo=vite)](https://vitejs.dev)
@@ -21,6 +21,18 @@ Portfolio website for **Muskan Challana** — AI Builder, Vibe Coder, and Busine
 - 📜 McKinsey Forward certified | 83 Unstop competition certificates
 - 🌏 2 years international experience in Adelaide, Australia
 - 🏊 Represented India internationally in swimming and Kathak dance
+
+## 🌟 Highlights
+
+- International work experience in Australia (2 years)
+
+## 🎓 Education
+
+- Sabarmati University — Bachelor of Commerce (Completed)
+
+## 🔗 Live Demo
+
+- https://muskanchallana.vercel.app
 
 ## ✨ Features
 

@@ -84,8 +84,10 @@ const certifications = [
 
 const education = [
     'Sabarmati University — Bachelor of Commerce (Completed)',
-    'Torrens University, Adelaide — Bachelor of Business Information Systems (On Hold)',
 ];
+
+const internationalExposure =
+    'Adelaide, Australia (2022–2024): 2 years of independent living and professional work experience in high-pressure environments across healthcare, hospitality, and corporate sectors.';
 
 const skillGroups = [
     {
@@ -221,6 +223,11 @@ const ResumePage: React.FC<ResumePageProps> = ({ onBack }) => {
                                     ))}
                                 </ul>
                             </div>
+                        </section>
+
+                        <section className="border border-zinc-800 rounded-xl p-5 bg-zinc-950">
+                            <h3 className="text-lg font-semibold text-red-500 mb-3">International Exposure</h3>
+                            <p className="text-sm text-zinc-200 leading-relaxed">{internationalExposure}</p>
                         </section>
                     </div>
                 )}

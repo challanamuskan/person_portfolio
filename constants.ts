@@ -292,9 +292,9 @@ export const PORTFOLIO_DATA: ContentCategory[] = [
             },
             {
                 id: 'australia',
-                title: 'International Study & Work Experience',
+                title: 'International Exposure',
                 subtitle: 'Adelaide, Australia · 2022–2024',
-                description: 'Lived and worked independently in Adelaide, Australia for 2 years. Gained hands-on professional experience across hospitality and events (Adelaide Oval, Adelaide Convention Centre), healthcare (Flinders Medical Centre), luxury retail (Lagardère), and university mentoring (UniSA). Developed cross-cultural communication, resilience, and global work ethic.',
+                description: 'Adelaide, Australia (2022–2024): 2 years of independent living and professional work experience in high-pressure environments across healthcare, hospitality, and corporate sectors.',
                 tags: ['Australia', 'International Experience', 'Adelaide', 'Cross-Cultural', 'Independent'],
                 year: '2022–2024',
                 imageUrl: 'https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?q=80&w=2070&auto=format&fit=crop',

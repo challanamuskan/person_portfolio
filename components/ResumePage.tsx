@@ -30,7 +30,7 @@ const experience: ExperienceItem[] = [
         bullets: [
             'Key accomplishment: Delivered Satyam Tex Fabb CRM — live at satyam-tex-fabb.streamlit.app',
             'Features: OCR scanning, WhatsApp + Email automation, MIS, role-based login',
-            '100% AI vibe-coded using Claude, Copilot, Cursor',
+            'Built using Python, Streamlit, Claude API, Google Sheets API, WhatsApp Business API — iterative AI-assisted development',
         ],
     },
     {
@@ -43,26 +43,6 @@ const experience: ExperienceItem[] = [
             'Cut stock variances by 22% with pivot table inventory analysis.',
             'Boosted upsell rates by 20% with tailored luxury buyer pitches.',
             'Built weekly Google Sheets dashboards for real-time team performance tracking.',
-        ],
-    },
-    {
-        title: 'Hospitality & Events Staff',
-        subtitle: 'Adelaide Oval & Adelaide Convention Centre · Australia',
-        year: '2022–2024',
-        color: '#8b5cf6',
-        bullets: [
-            'Managed high-volume service at premier Australian venues including Adelaide Oval (50k+ capacity).',
-            'Developed elite teamwork and customer service skills during major international cricket and AFL events.',
-        ],
-    },
-    {
-        title: 'COVID Concierge',
-        subtitle: 'Flinders Medical Centre · Adelaide, Australia',
-        year: '2022–2023',
-        color: '#10b981',
-        bullets: [
-            'Provided critical patient and visitor screening at Flinders Medical Centre.',
-            'Managed infection control protocols and crisis communication in a high-pressure healthcare setting.',
         ],
     },
     {

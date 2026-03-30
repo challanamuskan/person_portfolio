@@ -106,14 +106,14 @@ const Hero: React.FC<HeroProps> = ({ onViewResume }) => {
                             boxShadow: '0 0 6px #4ade80',
                         }}
                     ></span>
-                    Open to freelance & collaborations
+                    Building AI infrastructure for Indian SMEs
                 </div>
                                 <div style={{ display: 'flex', gap: '32px', marginTop: '24px', flexWrap: 'wrap' }}>
                                     {[
-                                        { number: '4', label: 'Live Projects' },
-                                        { number: '83+', label: 'Certificates' },
-                                        { number: '6', label: 'IIT / IIM Fests' },
-                                        { number: '2', label: 'Countries' },
+                                        { number: '1', label: 'LIVE SME CLIENT' },
+                                        { number: '4', label: 'DEPLOYED PROJECTS' },
+                                        { number: '6', label: 'IIT / IIM FESTS' },
+                                        { number: '2', label: 'COUNTRIES' },
                                     ].map((stat) => (
                                         <div key={stat.label} style={{ textAlign: 'center' }}>
                                             <div style={{ fontSize: '2rem', fontWeight: 900, color: '#e50914', lineHeight: 1 }}>

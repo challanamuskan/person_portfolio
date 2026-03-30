@@ -19,7 +19,7 @@ const REPLIES: Array<{ regex: RegExp; text: string }> = [
     },
     {
         regex: /crm|satyam|tex fabb|streamlit/i,
-        text: "📦 **Satyam Tex Fabb CRM** is Muskan's flagship live project — a complete business CRM for a 30-year textile machinery company in Bhilwara.\n\nFeatures: OCR bill scanning, WhatsApp + Email automation, MIS with attendance tracking, role-based login, live calendar.\n\n🔗 Live now: https://satyam-tex-fabb.streamlit.app",
+        text: "📦 **Satyam Tex Fabb CRM** is Muskan's flagship live project — a complete business CRM for a 30-year textile machinery company in Jaipur.\n\nFeatures: OCR bill scanning, WhatsApp + Email automation, MIS with attendance tracking, role-based login, live calendar.\n\n🔗 Live now: https://satyam-tex-fabb.streamlit.app",
     },
     {
         regex: /nsc|national sales|b2b|catalogue/i,
@@ -43,7 +43,7 @@ const REPLIES: Array<{ regex: RegExp; text: string }> = [
     },
     {
         regex: /experience|work|job|career|australia/i,
-        text: "💼 Experience:\n• **Freelance AI Builder** — Bhilwara (2025–Present)\n• **Campus Ambassador eDCon'26** — IIT Delhi\n• **Hospitality & Bartending** — Adelaide Oval & Convention Centre (2022–2024)\n• **COVID Concierge** — Flinders Medical Centre (2022–2023)\n• **Sales & Marketing Coordinator** — Lagardère AWPL, Australia\n• **Student Mentor** — UniSA",
+        text: "💼 Experience:\n• **Freelance AI Builder** — Jaipur (2025–Present)\n• **Campus Ambassador eDCon'26** — IIT Delhi\n• **Sales & Marketing Coordinator** — Lagardère AWPL, Australia\n• **Student Mentor** — UniSA",
     },
     {
         regex: /iit|iim|mckinsey|achieve|award|competition|fest|certificate/i,
@@ -59,15 +59,15 @@ const REPLIES: Array<{ regex: RegExp; text: string }> = [
     },
     {
         regex: /hospital|bartend|adelaide|flinders|covid|healthcare|oval/i,
-        text: "🏟️ Muskan worked at **Adelaide Oval** and **Adelaide Convention Centre** (hospitality & bartending, 2022–2024), and as **COVID Concierge** at Flinders Medical Centre (2022–2023) — managing patient screening at one of South Australia's largest public hospitals.",
+        text: "🏟️ Muskan worked at **Adelaide Oval** and **Adelaide Convention Centre** (hospitality & bartending, 2022–2024), and gained fast-paced customer operations experience across major Australian venues.",
     },
     {
         regex: /contact|hire|email|linkedin|available|freelance|work with/i,
         text: '📬 Want to work with Muskan?\n• **Email**: cmuskan2068@gmail.com\n• **LinkedIn**: linkedin.com/in/muskan-challana-408234163\n• **GitHub**: github.com/challanamuskan\n\nOpen to freelance projects, remote roles, and internships!',
     },
     {
-        regex: /location|where|bhilwara|rajasthan|india/i,
-        text: '📍 Based in **Bhilwara, Rajasthan, India**. Previously lived in **Adelaide, Australia** for 2 years. Available for remote work globally.',
+        regex: /location|where|jaipur|rajasthan|india/i,
+        text: '📍 Based in **Jaipur, Rajasthan, India**. Previously lived in **Adelaide, Australia** for 2 years. Available for remote work globally.',
     },
     {
         regex: /thank|thanks|great|awesome|nice|cool/i,

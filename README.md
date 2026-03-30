@@ -14,7 +14,7 @@
 
 ## 👤 About
 
-Portfolio website for **Muskan Challana** — AI Builder, Vibe Coder, and Business Analyst based in Bhilwara, Rajasthan.
+Portfolio website for **Muskan Challana** — AI Product Builder, SME Automation specialist, and Business Analyst based in Jaipur, Rajasthan.
 
 - 🏭 Delivered a live production CRM for a 30-year textile machinery business
 - 🏆 Competed at IIT Madras, IIT Bombay, IIT Delhi, IIM Kozhikode, IIM Indore & IIM Rohtak

@@ -9,7 +9,9 @@ const AnimatedProjectsBackground: React.FC = () => {
             left: `${i * 2}%`,
             animationDuration: `${Math.random() * 10 + 5}s`,
             animationDelay: `-${Math.random() * 15}s`,
-            writingMode: 'vertical-rl'
+            writingMode: 'vertical-rl',
+            whiteSpace: 'nowrap',
+            userSelect: 'none',
         };
         return (
             <div key={i} style={style} className="absolute top-0 text-red-500/30 font-mono text-xs md:text-sm animate-matrix-rain">
@@ -20,7 +22,9 @@ const AnimatedProjectsBackground: React.FC = () => {
 
     return (
         <div aria-hidden="true" className="fixed inset-0 -z-10 overflow-hidden bg-black">
-            {columns}
+            <div className="absolute inset-y-0 left-6 right-6 overflow-hidden">
+                {columns}
+            </div>
             <style>{`
                 @keyframes matrix-rain {
                     from { transform: translateY(-100%); }

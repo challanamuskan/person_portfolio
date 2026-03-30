@@ -21,10 +21,35 @@ function App() {
     if (typeof window === 'undefined') return false;
     const params = new URLSearchParams(window.location.search);
     if (params.get('skip') === '1') return false;
-    const introSeen = window.localStorage.getItem('introSeen') === 'true';
-    return !introSeen;
+    const hasVisited = window.localStorage.getItem('hasVisited') === 'true';
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    return !(hasVisited || prefersReducedMotion);
+  });
+  const [isMainVisible, setIsMainVisible] = useState(false);
+  const [mainFadeDurationMs] = useState<number>(() => {
+    if (typeof window === 'undefined') return 300;
+    const params = new URLSearchParams(window.location.search);
+    const skipIntro = params.get('skip') === '1';
+    const hasVisited = window.localStorage.getItem('hasVisited') === 'true';
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    return skipIntro || hasVisited || prefersReducedMotion ? 300 : 500;
   });
   const [currentPage, setCurrentPage] = useState('home');
+
+  useEffect(() => {
+    if (showIntro) {
+      setIsMainVisible(false);
+      return;
+    }
+
+    const timer = window.setTimeout(() => {
+      setIsMainVisible(true);
+    }, 20);
+
+    return () => {
+      window.clearTimeout(timer);
+    };
+  }, [showIntro]);
 
   const handleCardClick = (item: PortfolioItem) => {
     setSelectedItem(item);
@@ -37,9 +62,9 @@ function App() {
   const handleIntroFinish = () => {
     setShowIntro(false);
     if (typeof window !== 'undefined') {
-      window.localStorage.setItem('introSeen', 'true');
+      window.localStorage.setItem('hasVisited', 'true');
     }
-  }
+  };
 
   const handleShowPage = (page: string) => {
     setCurrentPage(page);
@@ -85,18 +110,18 @@ function App() {
   return (
     <div className="bg-black text-white min-h-screen font-sans overflow-x-hidden">
       <Helmet>
-        <title>Muskan Challana — AI Builder & Vibe Coder | Jaipur, India</title>
+        <title>Muskan Challana — AI Product Builder | Jaipur</title>
         <meta
           name="description"
-          content="Muskan Challana — AI Builder and Vibe Coder from Jaipur. I ship live AI products for real businesses using Claude, Gemini, Python, and React. 4 live projects. 6 IIT/IIM fests. Open to freelance and collaborations."
+          content="AI product builder shipping deployed systems for Indian SMEs. Built Satyam Tex Fabb CRM (live), RAG legal assistant, and B2B automation tools using Python, Claude API, and React."
         />
-        <meta property="og:title" content="Muskan Challana — AI Builder & Vibe Coder" />
-        <meta property="og:description" content="I ship live AI products for real businesses. Freelance AI developer from Jaipur, India." />
+        <meta property="og:title" content="Muskan Challana — AI Product Builder" />
+        <meta property="og:description" content="Self-taught builder. Live CRM for a 30-year-old Jaipur textile business. RAG pipelines, WhatsApp automation, MIS dashboards." />
         <meta property="og:image" content="https://muskanchallana.vercel.app/og-image.png" />
         <meta property="og:url" content="https://muskanchallana.vercel.app" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Muskan Challana — AI Builder & Vibe Coder" />
-        <meta name="twitter:description" content="I ship live AI products for real businesses. Freelance AI developer from Jaipur, India." />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Muskan Challana — AI Product Builder" />
+        <meta name="twitter:description" content="Self-taught builder. Live CRM for a 30-year-old Jaipur textile business. RAG pipelines, WhatsApp automation, MIS dashboards." />
       </Helmet>
 
       <Header 
@@ -108,7 +133,10 @@ function App() {
         onShowResume={() => handleShowPage('resume')}
       />
       
-      <main>
+      <main
+        className={`transition-opacity ${isMainVisible ? 'opacity-100' : 'opacity-0'} ${showIntro ? 'pointer-events-none' : ''}`}
+        style={{ transitionDuration: `${mainFadeDurationMs}ms` }}
+      >
         {renderCurrentPage()}
       </main>
 

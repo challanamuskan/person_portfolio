@@ -81,10 +81,10 @@ const Modal: React.FC<ModalProps> = ({ item, onClose }) => {
                                 <span key={tag} className="bg-zinc-700 text-xs font-semibold px-2 py-1 rounded-full">{tag}</span>
                             ))}
                         </div>
-                         <span className="text-gray-400 font-bold text-sm">{item.year}</span>
+                        <span className="text-gray-400 font-bold text-sm">{item.year ?? ''}</span>
                     </div>
 
-                    <p className="text-gray-300 leading-relaxed">{item.longDescription}</p>
+                    <p className="text-gray-300 leading-relaxed">{item.longDescription ?? item.description}</p>
                     
                     {item.link && (
                          <a 

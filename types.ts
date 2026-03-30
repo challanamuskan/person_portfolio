@@ -1,14 +1,15 @@
 
 
 export interface PortfolioItem {
-  id: number;
+  id: string | number;
   title: string;
+  subtitle?: string;
   description: string;
-  longDescription: string;
+  longDescription?: string;
   imageUrl: string;
   tags: string[];
   link?: string;
-  year: string;
+  year?: string;
   modalStyle?: 'achievement';
 }
 

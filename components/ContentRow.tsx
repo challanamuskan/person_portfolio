@@ -25,7 +25,7 @@ const Arrow: React.FC<{direction: 'left' | 'right', onClick: () => void}> = ({ d
 
 const ContentRow: React.FC<ContentRowProps> = ({ title, items, onCardClick }) => {
     const scrollContainerRef = useRef<HTMLDivElement>(null);
-    const [hoveredItemId, setHoveredItemId] = useState<number | null>(null);
+    const [hoveredItemId, setHoveredItemId] = useState<string | number | null>(null);
 
     const scroll = (direction: 'left' | 'right') => {
         if (scrollContainerRef.current) {

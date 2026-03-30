@@ -63,7 +63,7 @@ const ProjectsPage: React.FC = () => {
                             <div className="p-6 flex flex-col flex-grow">
                                 <h3 className="text-xl font-bold mb-2 text-white">{item.title}</h3>
                                 <p className="text-gray-400 text-sm mb-4">{item.description}</p>
-                                <p className="text-gray-300 mb-4 leading-relaxed flex-grow">{item.longDescription}</p>
+                                <p className="text-gray-300 mb-4 leading-relaxed flex-grow">{item.longDescription ?? item.description}</p>
                                 <div className="flex flex-wrap gap-2 mb-4">
                                     {item.tags.map(tag => (
                                         <span key={tag} className="bg-zinc-700 text-xs font-semibold px-2 py-1 rounded-full">{tag}</span>

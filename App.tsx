@@ -43,7 +43,7 @@ function App() {
   };
 
   // Create a summary version of the data for the homepage
-  const summaryCategories = ["Professional Experience", "Projects", "Key Achievements", "Skills"];
+  const summaryCategories = ["Experience", "Projects", "Achievements", "Skills"];
   const homepageData = PORTFOLIO_DATA.map(category => {
       if (summaryCategories.includes(category.title)) {
           return {

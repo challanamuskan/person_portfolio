@@ -82,12 +82,29 @@ const Hero: React.FC<HeroProps> = ({ onViewResume }) => {
                 <p className="max-w-xl text-sm md:text-base leading-relaxed">
                     {PERSONAL_INFO.bio}
                 </p>
+                                <div style={{ display: 'flex', gap: '32px', marginTop: '24px', flexWrap: 'wrap' }}>
+                                    {[
+                                        { number: '4', label: 'Live Projects' },
+                                        { number: '83', label: 'Certificates' },
+                                        { number: '6', label: 'IIT / IIM Fests' },
+                                        { number: '3', label: 'Countries' },
+                                    ].map((stat) => (
+                                        <div key={stat.label} style={{ textAlign: 'center' }}>
+                                            <div style={{ fontSize: '2rem', fontWeight: 900, color: '#e50914', lineHeight: 1 }}>
+                                                {stat.number}
+                                            </div>
+                                            <div style={{ fontSize: '0.75rem', color: '#999', marginTop: '4px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                                                {stat.label}
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
                 <div className="mt-8 flex space-x-4">
-                    <a href="mailto:cmuskan2068@gmail.com?subject=Resume Request&body=Hi Muskan, I'd like to request your resume." className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-6 rounded transition-transform hover:scale-105 flex items-center">
+                    <a href="https://www.linkedin.com/in/muskan-challana-408234163/" target="_blank" rel="noopener noreferrer" className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-6 rounded transition-transform hover:scale-105 flex items-center">
                          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
                             <path fillRule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-2a1 1 0 00-1-1H9a1 1 0 00-1 1v2a1 1 0 01-1 1H4a1 1 0 110-2V4zm5 1a1 1 0 00-1 1v1a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
                         </svg>
-                        View Resume
+                                                View LinkedIn Profile
                     </a>
                     <a href={PERSONAL_INFO.contactEmail} className="bg-gray-700 hover:bg-gray-800 text-white font-bold py-2 px-6 rounded transition-transform hover:scale-105 flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">

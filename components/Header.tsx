@@ -52,30 +52,30 @@ const Header: React.FC<HeaderProps> = ({ onShowHome, onShowProjects, onShowAchie
                     MyFlix
                 </h1>
                 <nav className="hidden md:flex items-center space-x-6 text-sm">
-                    <button onClick={onShowHome} className="hover:text-gray-300 transition-colors bg-transparent border-none text-white cursor-pointer">Home</button>
-                    <button onClick={onShowProjects} className="hover:text-gray-300 transition-colors bg-transparent border-none text-white cursor-pointer">
+                    <button aria-label="Navigate to home section" onClick={onShowHome} className="hover:text-gray-300 transition-colors bg-transparent border-none text-white cursor-pointer min-h-[44px] px-2">
+                        Home
+                    </button>
+                    <button aria-label="Navigate to projects section" onClick={onShowProjects} className="hover:text-gray-300 transition-colors bg-transparent border-none text-white cursor-pointer min-h-[44px] px-2">
                         Projects
                     </button>
-                    <button onClick={onShowAchievements} className="hover:text-gray-300 transition-colors bg-transparent border-none text-white cursor-pointer">
+                    <button aria-label="Navigate to achievements section" onClick={onShowAchievements} className="hover:text-gray-300 transition-colors bg-transparent border-none text-white cursor-pointer min-h-[44px] px-2">
                         Achievements
                     </button>
-                    <button onClick={onShowExperience} className="hover:text-gray-300 transition-colors bg-transparent border-none text-white cursor-pointer">
+                    <button aria-label="Navigate to experience section" onClick={onShowExperience} className="hover:text-gray-300 transition-colors bg-transparent border-none text-white cursor-pointer min-h-[44px] px-2">
                         Experience
                     </button>
-                    <button onClick={onShowSkills} className="hover:text-gray-300 transition-colors bg-transparent border-none text-white cursor-pointer">
+                    <button aria-label="Navigate to skills section" onClick={onShowSkills} className="hover:text-gray-300 transition-colors bg-transparent border-none text-white cursor-pointer min-h-[44px] px-2">
                         Skills
                     </button>
-                    <button onClick={onShowResume} className="bg-red-600 hover:bg-red-700 text-white font-semibold py-1.5 px-3 rounded transition-colors border-none cursor-pointer">
+                    <button aria-label="Navigate to resume page" onClick={onShowResume} className="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-3 rounded transition-colors border-none cursor-pointer min-h-[44px]">
                         Resume
                     </button>
-                    <a href="#contact" onClick={handleContactScroll} className="hover:text-gray-300 transition-colors">Contact</a>
+                    <a aria-label="Navigate to contact section" href="#contact" onClick={handleContactScroll} className="hover:text-gray-300 transition-colors inline-flex items-center min-h-[44px] px-2">Contact</a>
                 </nav>
                  <div className="flex items-center space-x-4">
-                    <img
-                        src="https://picsum.photos/seed/avatar/40/40"
-                        alt="Profile"
-                        className="w-8 h-8 rounded"
-                    />
+                    <div className="w-10 h-10 rounded bg-zinc-800 border border-zinc-700 flex items-center justify-center" aria-label="Profile badge" title="Muskan Challana">
+                        <span className="text-xs font-semibold text-zinc-200">MC</span>
+                    </div>
                 </div>
             </div>
         </header>

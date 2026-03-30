@@ -78,6 +78,12 @@ const Intro: React.FC<IntroProps> = ({ onFinished }) => {
       className={`fixed inset-0 bg-black flex items-center justify-center z-[100] transition-opacity duration-500 ease-out ${animationState === 'finished' ? 'opacity-0' : 'opacity-100'} cursor-pointer`}
       aria-hidden={animationState === 'finished'}
       onClick={startIntro}
+      onKeyDown={(event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          startIntro();
+        }
+      }}
       role="button"
       tabIndex={0}
     >
@@ -104,10 +110,21 @@ const Intro: React.FC<IntroProps> = ({ onFinished }) => {
 
       {!userInteracted && (
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white animate-pulse">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 mb-4" viewBox="0 0 20 20" fill="currentColor">
-            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
-          </svg>
-          <p className="text-xl font-semibold tracking-wider">Click to Enter</p>
+          <button
+            type="button"
+            onClick={(event) => {
+              event.stopPropagation();
+              startIntro();
+            }}
+            aria-label="Play intro animation"
+            className="min-w-[44px] min-h-[44px] flex flex-col items-center justify-center"
+            style={{ background: 'transparent', border: 'none', color: 'white', cursor: 'pointer' }}
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 mb-4" viewBox="0 0 20 20" fill="currentColor">
+              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+            </svg>
+            <p className="text-xl font-semibold tracking-wider">Click to Enter</p>
+          </button>
         </div>
       )}
 
@@ -122,6 +139,7 @@ const Intro: React.FC<IntroProps> = ({ onFinished }) => {
       <style>{`
         .perspective-container {
           perspective: 800px;
+          -webkit-perspective: 800px;
         }
         .m-part {
           position: absolute;
@@ -131,6 +149,7 @@ const Intro: React.FC<IntroProps> = ({ onFinished }) => {
           height: 100%;
           background-color: #E50914;
           transform-origin: center;
+          -webkit-transform-origin: center;
           opacity: 0;
           box-shadow: 0 0 10px #E50914, 0 0 20px #E50914, 0 0 30px #FF1E2D;
         }
@@ -153,12 +172,15 @@ const Intro: React.FC<IntroProps> = ({ onFinished }) => {
 
         .m-part.left.playing {
             animation: foldLeft-dramatic 2.5s cubic-bezier(0.6, 0.0, 0, 1.0) forwards;
+          -webkit-animation: foldLeft-dramatic 2.5s cubic-bezier(0.6, 0.0, 0, 1.0) forwards;
         }
         .m-part.right.playing {
             animation: foldRight-dramatic 2.5s cubic-bezier(0.6, 0.0, 0, 1.0) forwards;
+          -webkit-animation: foldRight-dramatic 2.5s cubic-bezier(0.6, 0.0, 0, 1.0) forwards;
         }
         .m-shadow.playing {
             animation: shadowGrow-dramatic 2s cubic-bezier(0.2, 1, 0.2, 1) 0.5s forwards;
+          -webkit-animation: shadowGrow-dramatic 2s cubic-bezier(0.2, 1, 0.2, 1) 0.5s forwards;
         }
 
         @keyframes foldLeft-dramatic {

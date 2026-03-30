@@ -38,16 +38,34 @@ const ContentCard: React.FC<ContentCardProps> = ({ item, onClick, onMouseEnter, 
                 onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && onClick()}
             >
                 {/* Gradient placeholder keeps cards consistent and avoids broken/irrelevant stock images */}
-                <div
-                    className="w-full h-full flex items-center justify-center"
-                    style={{
-                        background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)',
-                    }}
-                >
-                    <span style={{ color: 'rgba(255,255,255,0.3)', fontSize: '12px', fontFamily: 'monospace' }}>
-                        {item.title || 'Project'}
-                    </span>
-                </div>
+                {item.link ? (
+                    <a
+                        href={item.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        aria-label={`Open ${item.title} live link`}
+                        className="w-full h-full flex items-center justify-center"
+                        style={{
+                            background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)',
+                        }}
+                    >
+                        <span style={{ color: 'rgba(255,255,255,0.3)', fontSize: '12px', fontFamily: 'monospace' }}>
+                            {item.title || 'Project'}
+                        </span>
+                    </a>
+                ) : (
+                    <div
+                        className="w-full h-full flex items-center justify-center"
+                        style={{
+                            background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)',
+                        }}
+                    >
+                        <span style={{ color: 'rgba(255,255,255,0.3)', fontSize: '12px', fontFamily: 'monospace' }}>
+                            {item.title || 'Project'}
+                        </span>
+                    </div>
+                )}
 
                 {/* The Netflix-style info panel that fades in on hover */}
                 <div className={`absolute top-0 left-0 w-full h-full
@@ -63,7 +81,7 @@ const ContentCard: React.FC<ContentCardProps> = ({ item, onClick, onMouseEnter, 
                         )}
                         <div className="flex justify-end items-center mt-2">
                             {/* "More Info" button (triggers modal) */}
-                            <button onClick={(e) => handleActionClick(e, onClick)} aria-label="More information" className="w-7 h-7 rounded-full flex items-center justify-center bg-zinc-800/80 border-2 border-gray-400 text-white hover:border-white transition-colors">
+                            <button onClick={(e) => handleActionClick(e, onClick)} aria-label="More information" className="w-11 h-11 rounded-full flex items-center justify-center bg-zinc-800/80 border-2 border-gray-400 text-white hover:border-white transition-colors">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
                             </button>
                         </div>

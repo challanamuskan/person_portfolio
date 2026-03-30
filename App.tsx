@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import CategorySection from './components/CategorySection';
@@ -16,8 +17,13 @@ import type { PortfolioItem } from './types';
 
 function App() {
   const [selectedItem, setSelectedItem] = useState<PortfolioItem | null>(null);
-  const [showIntro, setShowIntro] = useState(true);
-  const [isIntroFinished, setIsIntroFinished] = useState(false);
+  const [showIntro, setShowIntro] = useState<boolean>(() => {
+    if (typeof window === 'undefined') return false;
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('skip') === '1') return false;
+    const introSeen = window.localStorage.getItem('introSeen') === 'true';
+    return !introSeen;
+  });
   const [currentPage, setCurrentPage] = useState('home');
 
   const handleCardClick = (item: PortfolioItem) => {
@@ -30,7 +36,9 @@ function App() {
 
   const handleIntroFinish = () => {
     setShowIntro(false);
-    setIsIntroFinished(true);
+    if (typeof window !== 'undefined') {
+      window.localStorage.setItem('introSeen', 'true');
+    }
   }
 
   const handleShowPage = (page: string) => {
@@ -42,11 +50,6 @@ function App() {
     handleShowPage('home');
   };
 
-
-  if (showIntro) {
-    return <Intro onFinished={handleIntroFinish} />;
-  }
-  
   const renderCurrentPage = () => {
     switch (currentPage) {
         case 'projects':
@@ -80,7 +83,22 @@ function App() {
   };
 
   return (
-    <div className={`bg-black text-white min-h-screen font-sans transition-opacity duration-1000 ${isIntroFinished ? 'opacity-100' : 'opacity-0'}`}>
+    <div className="bg-black text-white min-h-screen font-sans overflow-x-hidden">
+      <Helmet>
+        <title>Muskan Challana — AI Builder & Vibe Coder | Jaipur, India</title>
+        <meta
+          name="description"
+          content="Muskan Challana — AI Builder and Vibe Coder from Jaipur. I ship live AI products for real businesses using Claude, Gemini, Python, and React. 4 live projects. 6 IIT/IIM fests. Open to freelance and collaborations."
+        />
+        <meta property="og:title" content="Muskan Challana — AI Builder & Vibe Coder" />
+        <meta property="og:description" content="I ship live AI products for real businesses. Freelance AI developer from Jaipur, India." />
+        <meta property="og:image" content="https://muskanchallana.vercel.app/og-image.png" />
+        <meta property="og:url" content="https://muskanchallana.vercel.app" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Muskan Challana — AI Builder & Vibe Coder" />
+        <meta name="twitter:description" content="I ship live AI products for real businesses. Freelance AI developer from Jaipur, India." />
+      </Helmet>
+
       <Header 
         onShowHome={handleBackToHome}
         onShowProjects={() => handleShowPage('projects')}
@@ -97,6 +115,8 @@ function App() {
       {selectedItem && <Modal item={selectedItem} onClose={closeModal} />}
       <Footer />
       <Chatbot />
+
+      {showIntro && <Intro onFinished={handleIntroFinish} />}
     </div>
   );
 }

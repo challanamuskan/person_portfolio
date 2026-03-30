@@ -9,7 +9,11 @@ interface ContentRowProps {
 }
 
 const Arrow: React.FC<{direction: 'left' | 'right', onClick: () => void}> = ({ direction, onClick }) => (
-    <button onClick={onClick} className={`absolute top-0 bottom-0 ${direction === 'left' ? 'left-0' : 'right-0'} z-30 w-12 bg-black bg-opacity-50 hover:bg-opacity-75 transition-all flex items-center justify-center opacity-0 group-hover:opacity-100`}>
+    <button
+        aria-label={direction === 'left' ? 'Scroll row left' : 'Scroll row right'}
+        onClick={onClick}
+        className={`absolute top-0 bottom-0 ${direction === 'left' ? 'left-0' : 'right-0'} z-30 w-12 bg-black bg-opacity-50 hover:bg-opacity-75 transition-all flex items-center justify-center opacity-0 group-hover:opacity-100`}
+    >
         {direction === 'left' ? (
              <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />

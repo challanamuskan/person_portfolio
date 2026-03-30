@@ -30,7 +30,7 @@ export const PORTFOLIO_DATA: ContentCategory[] = [
             },
             {
                 id: 'nsc',
-                title: 'NSC — B2B Product Catalogue & Lead Gen',
+                title: 'NSC B2B Catalogue',
                 subtitle: 'React website for a textile machinery parts dealer',
                 description: 'Full B2B product catalogue and lead generation website for National Sales Corporation. Animated SVG logo, 7-category product catalogue (loom parts, spinning spares, bearings, knitting components), RFQ inquiry form, AI chatbot. React + TypeScript + Vite.',
                 tags: ['React', 'TypeScript', 'Vite', 'B2B', 'Lead Generation', 'Textile'],
@@ -40,7 +40,7 @@ export const PORTFOLIO_DATA: ContentCategory[] = [
             },
             {
                 id: 'pitpilot',
-                title: 'PitPilot — F1 Race Strategy AI',
+                title: 'PitPilot F1 AI',
                 subtitle: 'AI-powered Formula 1 pit stop and race strategy assistant',
                 description: 'AI-driven analytics dashboard for Formula 1 race operations. Recommends optimal pit stop windows, tyre strategies, and overtaking opportunities based on live race data. Built with Python and data visualisation libraries.',
                 tags: ['Python', 'AI', 'Data Analytics', 'F1', 'Strategy'],
@@ -84,10 +84,11 @@ export const PORTFOLIO_DATA: ContentCategory[] = [
             },
             {
                 id: 'oval',
-                title: 'Hospitality & Events — Bartender',
+                title: 'Hospitality & Events Staff',
                 subtitle: 'Adelaide Oval & Adelaide Convention Centre · Australia · 2022–2024',
-                description: "Delivered premium hospitality and bartending at two of Adelaide's most prestigious venues. Adelaide Oval hosts major international cricket and AFL events (50,000+ capacity). Adelaide Convention Centre hosts large-scale corporate and international conferences. Managed bar operations and guest service under high-pressure, high-volume event conditions.",
-                tags: ['Hospitality', 'Bartending', 'Events Management', 'Adelaide', 'Australia'],
+                description: "Delivered premium hospitality and events at two of Adelaide's most prestigious venues. Adelaide Oval hosts major international cricket and AFL events (50,000+ capacity). Adelaide Convention Centre hosts large-scale corporate and international conferences. Managed bar operations and guest service under high-pressure, high-volume event conditions.",
+                longDescription: "Delivered premium hospitality and events at two of Adelaide's most prestigious venues: Adelaide Oval and Adelaide Convention Centre. Managed guest-facing service and high-volume event floor operations during major sports fixtures, corporate programs, and international conferences.",
+                tags: ['Hospitality', 'Events', 'Events Management', 'Adelaide', 'Australia'],
                 year: '2022–2024',
                 imageUrl: 'https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?q=80&w=2029&auto=format&fit=crop',
             },

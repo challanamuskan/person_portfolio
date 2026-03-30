@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import ContentRow from './components/ContentRow';
+import CategorySection from './components/CategorySection';
 import Modal from './components/Modal';
 import Footer from './components/Footer';
 import Intro from './components/Intro';
@@ -42,18 +42,6 @@ function App() {
     handleShowPage('home');
   };
 
-  // Create a summary version of the data for the homepage
-  const summaryCategories = ["Experience", "Projects", "Achievements", "Skills"];
-  const homepageData = PORTFOLIO_DATA.map(category => {
-      if (summaryCategories.includes(category.title)) {
-          return {
-              ...category,
-              items: category.items.slice(0, 3) // Show top 3 items for summary sections
-          };
-      }
-      return category; // Show all items for other sections like Education, Certs
-  });
-
 
   if (showIntro) {
     return <Intro onFinished={handleIntroFinish} />;
@@ -77,8 +65,8 @@ function App() {
                 <>
               <Hero onViewResume={() => handleShowPage('resume')} />
                     <div className="py-4 md:py-8 lg:py-16 pl-4 md:pl-12 lg:pl-16 relative z-10 -mt-16 md:-mt-24">
-                        {homepageData.map((category) => (
-                            <ContentRow
+                    {PORTFOLIO_DATA.map((category) => (
+                      <CategorySection
                                 key={category.title}
                                 title={category.title}
                                 items={category.items}

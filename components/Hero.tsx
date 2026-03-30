@@ -87,7 +87,7 @@ const Hero: React.FC<HeroProps> = ({ onViewResume }) => {
                                         { number: '4', label: 'Live Projects' },
                                         { number: '83', label: 'Certificates' },
                                         { number: '6', label: 'IIT / IIM Fests' },
-                                        { number: '3', label: 'Countries' },
+                                        { number: '2', label: 'Countries' },
                                     ].map((stat) => (
                                         <div key={stat.label} style={{ textAlign: 'center' }}>
                                             <div style={{ fontSize: '2rem', fontWeight: 900, color: '#e50914', lineHeight: 1 }}>

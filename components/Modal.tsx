@@ -75,6 +75,7 @@ const Modal: React.FC<ModalProps> = ({ item, onClose }) => {
                     <h2 className="absolute bottom-4 left-6 text-2xl md:text-4xl font-bold text-white z-10">{item.title}</h2>
                 </div>
                 <div className="p-6 md:p-8 overflow-y-auto relative z-10">
+                    {item.subtitle && <p className="text-zinc-300 text-sm md:text-base mb-3">{item.subtitle}</p>}
                     <div className="flex justify-between items-baseline mb-4">
                        <div className="flex flex-wrap gap-2">
                             {item.tags.map(tag => (
@@ -84,7 +85,7 @@ const Modal: React.FC<ModalProps> = ({ item, onClose }) => {
                         <span className="text-gray-400 font-bold text-sm">{item.year ?? ''}</span>
                     </div>
 
-                    <p className="text-gray-300 leading-relaxed">{item.longDescription ?? item.description}</p>
+                    <p className="text-gray-300 leading-relaxed">{item.longDescription ?? item.description ?? ''}</p>
                     
                     {item.link && (
                          <a 

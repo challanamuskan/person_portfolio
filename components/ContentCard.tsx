@@ -47,7 +47,11 @@ const ContentCard: React.FC<ContentCardProps> = ({ item, onClick, onMouseEnter, 
                              bg-gradient-to-t from-black via-black/80 to-transparent`}>
                     
                     <div className="p-3 md:p-4">
-                        <h3 className="text-white font-bold text-sm md:text-base truncate">{item.title}</h3>
+                        <h3 className="text-zinc-300 text-xs md:text-sm truncate">{item.title}</h3>
+                        <p className="text-white font-bold text-sm md:text-base mt-1 truncate">{item.subtitle ?? item.title}</p>
+                        {item.description && (
+                            <p className="text-zinc-200 text-xs mt-2 line-clamp-2">{item.description}</p>
+                        )}
                         <div className="flex justify-end items-center mt-2">
                             {/* "More Info" button (triggers modal) */}
                             <button onClick={(e) => handleActionClick(e, onClick)} aria-label="More information" className="w-7 h-7 rounded-full flex items-center justify-center bg-zinc-800/80 border-2 border-gray-400 text-white hover:border-white transition-colors">

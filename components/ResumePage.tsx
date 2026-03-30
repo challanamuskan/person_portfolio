@@ -34,6 +34,18 @@ const experience: ExperienceItem[] = [
         ],
     },
     {
+        title: 'Sales & Marketing Coordinator',
+        subtitle: 'Lagardère AWPL · Australia',
+        year: '2022–2024',
+        color: '#2E5BBA',
+        bullets: [
+            'Transformed daily customer data into Excel insights, lifting sales by 15%.',
+            'Cut stock variances by 22% with pivot table inventory analysis.',
+            'Boosted upsell rates by 20% with tailored luxury buyer pitches.',
+            'Built weekly Google Sheets dashboards for real-time team performance tracking.',
+        ],
+    },
+    {
         title: 'Hospitality & Events Staff',
         subtitle: 'Adelaide Oval & Adelaide Convention Centre · Australia',
         year: '2022–2024',
@@ -51,18 +63,6 @@ const experience: ExperienceItem[] = [
         bullets: [
             'Provided critical patient and visitor screening at Flinders Medical Centre.',
             'Managed infection control protocols and crisis communication in a high-pressure healthcare setting.',
-        ],
-    },
-    {
-        title: 'Sales & Marketing Coordinator',
-        subtitle: 'Lagardère AWPL, Australia',
-        year: '2022–2024',
-        color: '#3b82f6',
-        bullets: [
-            'Lifted sales 15% through data-driven promotions',
-            'Cut stock variances 22% with pivot table inventory analysis',
-            'Boosted upsell rates 20% with tailored luxury buyer pitches',
-            'Built weekly Google Sheets dashboards for team performance',
         ],
     },
     {

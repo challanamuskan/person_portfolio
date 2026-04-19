@@ -2,7 +2,7 @@ import { ContentCategory } from './types';
 
 export const PERSONAL_INFO = {
     name: 'Muskan Challana',
-    title: 'AI Product Builder · SME Automation · Deployed Systems',
+    title: 'Building deployed AI systems for real businesses — RAG pipelines, OCR automation, LLM tools.',
     bio: "I build and deploy AI-powered systems for real Indian businesses — not demos, not prototypes. My first product, the Satyam Tex Fabb CRM, is live and in daily use by a 30-year-old textile machinery business in Jaipur, saving the owner 8+ hours of manual admin every week. I'm focused on one question: what can AI actually fix for a small Indian business today?",
     resumeUrl: 'https://www.linkedin.com/in/muskan-challana-408234163/',
     contactEmail: 'mailto:cmuskan2068@gmail.com',
@@ -66,10 +66,10 @@ export const PORTFOLIO_DATA: ContentCategory[] = [
         items: [
             {
                 id: 'freelance',
-                title: 'Freelance AI Builder & Vibe Coder',
+                title: 'Freelance AI Builder',
                 subtitle: 'Independent · Jaipur, Rajasthan · 2025–Present',
-                description: 'Building AI-powered business tools for SMEs using vibe-coding — shipping real products with Claude, Cursor, and Gemini without writing code manually. Delivered Satyam Tex Fabb CRM (live) and NSC B2B website. Building pipeline of similar tools for Rajasthan-based businesses and global freelance platforms.',
-                tags: ['AI Tools', 'Vibe Coding', 'CRM', 'Freelance', 'Python', 'React'],
+                description: 'Building AI-powered business tools for SMEs and shipping real products with Claude, Cursor, and Gemini. Delivered Satyam Tex Fabb CRM (live) and NSC B2B website. Building a pipeline of similar tools for Rajasthan-based businesses and global freelance platforms.',
+                tags: ['AI Tools', 'CRM', 'Freelance', 'Python', 'React'],
                 year: '2025–Present',
                 imageUrl: 'https://images.unsplash.com/photo-1664575602276-acd073f104c1?q=80&w=2070&auto=format&fit=crop',
             },
@@ -295,11 +295,11 @@ export const PORTFOLIO_DATA: ContentCategory[] = [
                 imageUrl: '',
             },
             {
-                id: 'skill-vibe-coding',
+                id: 'skill-rapid-ai-prototyping',
                 title: 'Rapid AI Prototyping',
                 subtitle: 'Claude, Cursor, GitHub Copilot',
                 description: 'Claude, Cursor, GitHub Copilot — iterative AI-assisted development for production apps',
-                tags: ['Claude', 'Cursor', 'GitHub Copilot', 'Vibe Coding'],
+                tags: ['Claude', 'Cursor', 'GitHub Copilot', 'AI-assisted Development'],
                 imageUrl: '',
             },
             {
@@ -328,10 +328,10 @@ export const PORTFOLIO_DATA: ContentCategory[] = [
             },
             {
                 id: 'skill-business-operations',
-                title: 'Business Operations',
-                subtitle: 'OCR processing, MIS, CRM, B2B catalogues, analytics',
-                description: 'OCR document processing, MIS dashboards, CRM design, B2B product catalogues, sales analytics',
-                tags: ['OCR', 'MIS', 'CRM', 'B2B', 'Sales Analytics'],
+                title: 'Research & Learning',
+                subtitle: 'AI safety, interpretability, prompt engineering, applied ML',
+                description: 'AI safety concepts, LLM interpretability, prompt engineering, applied ML through competition problem sets.',
+                tags: ['AI Safety', 'LLM Interpretability', 'Prompt Engineering', 'Applied ML'],
                 imageUrl: '',
             },
         ],

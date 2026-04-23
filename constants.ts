@@ -22,10 +22,10 @@ export const PORTFOLIO_DATA: ContentCategory[] = [
                 id: 'crm',
                 title: 'Satyam Tex Fabb CRM',
                 subtitle: 'Full-stack business CRM — live in production',
-                description: 'Built a complete CRM for a 30-year-old textile machinery parts business in Jaipur. Stock management with OCR bill scanning, customer & lead tracking, payment reminders via Email and WhatsApp, purchase orders, MIS with employee attendance, role-based login, live calendar. Python + Streamlit + Google Sheets. Live now.',
-                tags: ['Python', 'Streamlit', 'Google Sheets', 'Gmail API', 'WhatsApp', 'OCR', 'Live'],
+                description: 'Full-stack CRM for a 30-year-old textile machinery parts business in Jaipur. 2,000+ part inventory with OCR bill scanning, bulk CSV/XLS import (400-row batches), Excel/PDF export, Tally import, admin controls for categories and parts, intelligent API caching, automated low-stock email alerts (1st & 15th), full supplier price history, stock search across 2,000+ parts, part image gallery, customer & lead tracking, payment reminders, purchase orders, MIS analytics, employee attendance, role-based login. Python + Streamlit + Supabase. Live in daily use.',
+                tags: ['Python', 'Streamlit', 'Supabase', 'Gmail API', 'WhatsApp', 'OCR', 'Bulk Import', 'Live'],
                 year: '2026',
-                link: 'https://satyam-tex-fabb.streamlit.app',
+                link: 'https://satyamtexfab-crm.streamlit.app',
                 imageUrl: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop',
             },
             {

@@ -16,7 +16,7 @@
 
 Portfolio website for **Muskan Challana** — AI Product Builder, SME Automation specialist, and Business Analyst based in Jaipur, Rajasthan.
 
-- 🏭 Delivered a live production CRM for a 30-year textile machinery business
+- 🏭 Delivered a live production CRM for a 30-year textile machinery business — 2,000+ parts, OCR bill scanning, bulk import, automated stock alerts, full price history, admin controls, Excel/PDF/Tally export
 - 🏆 Competed at IIT Madras, IIT Bombay, IIT Delhi, IIM Kozhikode, IIM Indore & IIM Rohtak
 - 📜 McKinsey Forward certified | 83 Unstop competition certificates
 - 🌏 2 years international experience in Adelaide, Australia
@@ -73,7 +73,7 @@ npm run preview
 
 | Project | Stack | Link |
 |---------|-------|------|
-| Satyam Tex Fabb CRM | Python · Streamlit · Google Sheets | [Live](https://satyam-tex-fabb.streamlit.app) |
+| Satyam Tex Fabb CRM | Python · Streamlit · Supabase | [Live](https://satyamtexfab-crm.streamlit.app) |
 | NSC B2B Catalogue | React · TypeScript · Vite | [GitHub](https://github.com/challanamuskan) |
 | PitPilot F1 AI | Python · Data Analytics | [GitHub](https://github.com/challanamuskan/PitPilot-AI-Driven-Race-Ops-Pit-Strategy-Assistant) |
 | Student Legal Gateway | RAG · Python · AI | [GitHub](https://github.com/challanamuskan/uni_student_help) |

@@ -9,6 +9,7 @@ export interface PortfolioItem {
   imageUrl: string;
   tags: string[];
   link?: string;
+  liveUrl?: string;
   year?: string;
   modalStyle?: 'achievement';
 }

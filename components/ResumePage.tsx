@@ -29,20 +29,19 @@ const experience: ExperienceItem[] = [
         color: '#E50914',
         bullets: [
             'Founded Nexivo — B2B AI ops for Indian SMEs. DPIIT-registered under Startup India.',
-            'Products: Nexivo CRM (pipeline + WhatsApp/email automation), Nexivo Audit (AI audit platform, live at audit-nexivo.vercel.app), Nexivo Automate (workflow automation).',
-            '2 paying clients acquired within 3 months of starting from zero coding background.',
-            'Built using Python, Streamlit, Supabase PostgreSQL, Claude API, Gmail OAuth, WhatsApp Business API.',
+            'Products: Nexivo CRM (pipeline + WhatsApp/email automation, live), Nexivo Audit (AI audit platform, live at audit-nexivo.vercel.app), Nexivo Automate (workflow automation).',
+            '2 paying clients acquired within 3 months. CRM saves clients 8+ hours of manual admin per week.',
+            'Built using Python, Streamlit, Supabase PostgreSQL, Claude API, Gmail OAuth, WhatsApp Business API — AI-assisted development from zero coding background.',
         ],
     },
     {
         title: 'Freelance AI Builder',
         subtitle: 'Independent · Jaipur, Rajasthan',
-        year: '2025–2026',
+        year: 'Dec 2025–2026',
         color: '#9333ea',
         bullets: [
-            'Delivered a live production CRM for a 30-year-old Jaipur manufacturing business — OCR scanning, WhatsApp + email automation, MIS dashboard, role-based login.',
+            'Delivered a live production CRM for a 30-year-old Jaipur manufacturing business — OCR bill scanning, WhatsApp + email automation, MIS dashboard, role-based login.',
             'Delivered a B2B product catalogue and lead generation website for a textile machinery parts dealer.',
-            'AI-assisted development using Claude, Cursor, and Gemini — shipped production apps with no prior coding background.',
         ],
     },
     {
@@ -52,7 +51,7 @@ const experience: ExperienceItem[] = [
         color: '#2E5BBA',
         bullets: [
             'Transformed daily customer data into Excel insights, lifting sales by 15%.',
-            'Cut stock variances by 22% with pivot table inventory analysis.',
+            'Cut stock variances by 22% with pivot table inventory optimisation.',
             'Boosted upsell rates by 20% with tailored luxury buyer pitches.',
             'Built weekly Google Sheets dashboards for real-time team performance tracking.',
         ],
@@ -63,28 +62,29 @@ const experience: ExperienceItem[] = [
         year: '2022–2024',
         color: '#f59e0b',
         bullets: [
-            'Mentored international students through academic, cultural, and personal transitions for 2 years.',
-            'Part of the formal UniSA peer mentoring programme.',
+            'Mentored international students through academic, cultural, and personal transitions for 2 years as part of the formal UniSA peer mentoring programme.',
         ],
     },
 ];
 
 const certifications = [
-    'McKinsey Forward',
-    'Nestlé YEP Academy × 4 — Idea Generation, Solution Creation, Successful Entrepreneur, Food Product Development',
-    'Google Data Analytics (Coursera)',
-    'Cisco Networking Academy × 7',
-    'HP LIFE × 2 — Data Science & Analytics, AI for Business',
+    'McKinsey Forward — Global leadership & structured problem-solving (McKinsey & Company)',
+    'Nestlé YEP Academy × 4 — Idea Generation · Solution Creation · Successful Entrepreneur · Food Product Development',
+    'Nestlé Nesternship — Virtual internship programme (Nestlé)',
+    'Nestlé FoodTech Course — Food Product Development (Nestlé YEP Academy)',
+    'Google Data Analytics Professional Certificate (Coursera)',
+    'Cisco Networking Academy × 7 — Networking, SQL, Analytics, Excel, Dashboarding',
+    'HP LIFE × 2 — Data Science & Analytics · AI for Business Professionals',
     'GitHub Student Developer Pack',
 ];
 
 const education = [
-    'Vivekananda Global University — MCA, Master of Computer Applications · Distance · 2026–2028',
+    'Vivekananda Global University — MCA, Master of Computer Applications · Distance · 2026–2028 (in progress)',
     'Sabarmati University — B.Com, Bachelor of Commerce · Graduated 2025',
 ];
 
 const internationalExposure =
-    'Adelaide, Australia (2022–2025): 3 years of independent living and professional work across corporate, hospitality, and education sectors. Returned to India July 2025.';
+    'Adelaide, Australia (2022–2025): 3 years of independent living and professional work experience across corporate, hospitality, and education sectors. Returned to India July 2025.';
 
 const skillGroups = [
     {
@@ -92,8 +92,8 @@ const skillGroups = [
         tags: ['Claude API', 'Gemini API', 'OpenAI API', 'RAG Pipelines', 'Multi-Agent Systems', 'Prompt Engineering', 'Vector Search'],
     },
     {
-        title: 'Rapid AI Development',
-        tags: ['Claude', 'Cursor', 'GitHub Copilot', 'AI-Assisted Build', 'Vibe Coding'],
+        title: 'AI-Assisted Development',
+        tags: ['Claude', 'Cursor', 'GitHub Copilot', 'Iterative AI Build', 'Rapid Prototyping'],
     },
     {
         title: 'Languages & Frameworks',
@@ -109,22 +109,20 @@ const skillGroups = [
     },
     {
         title: 'Business & Strategy',
-        tags: ['Product Management', 'B2B Client Management', 'SME Operations', 'McKinsey Problem-Solving', 'Startup Development'],
+        tags: ['Product Management', 'B2B Client Management', 'SME Operations', 'McKinsey Problem-Solving Framework', 'Startup Development'],
     },
 ];
 
 const achievements: AchievementItem[] = [
-    { title: 'DPIIT-Registered Startup — Nexivo', description: 'Nexivo recognised under DPIIT, Government of India. Startup India benefits, accelerator eligibility.', year: '2026' },
-    { title: 'IIT Madras — SHAastra 2026 × 4', description: '4 certificates: ADI Reverse Engineering, Embedded Programming, E-Contest, Petri Dish Challenge.', year: '2026' },
-    { title: "IIM Kozhikode — Backwaters'26 × 4", description: '4 certificates: IPL Fantasy, Avatar CEO, Kotler Sutra Marketing, Project Horizon GPAI.', year: '2026' },
-    { title: 'IIM Indore — IRIS 2026', description: 'Ashwamesha Legacy Leadership Competition and Finance League: Equity Pitch Challenge.', year: '2026' },
-    { title: "Campus Ambassador — IIT Delhi eDCon'26", description: "Official Campus Ambassador for IIT Delhi's entrepreneurship and design conclave.", year: '2026' },
+    { title: 'DPIIT-Registered Startup — Nexivo', description: 'Nexivo recognised under DPIIT, Government of India. Startup India benefits and accelerator eligibility.', year: '2026' },
     { title: 'McKinsey Forward Certified', description: 'Selective global leadership and structured problem-solving programme by McKinsey & Company.', year: '2025' },
     { title: '3rd Place — IIM Rohtak National Competition', description: "Podium finish at a national competition at IIM Rohtak — one of India's premier management institutes.", year: '2025' },
-    { title: 'IIT Bombay — Techfest 2025 × 2', description: "2 certificates from Asia's largest science and technology festival: CTF (cybersecurity) + Agrowsera.", year: '2025' },
-    { title: '83 Competition Certificates — Unstop', description: 'Verified participation across IIT/IIM hackathons, case studies, data challenges, startup pitches.', year: '2025–2026' },
-    { title: 'Represented India — Freestyle Swimming', description: 'National-level competitive athlete. Represented India at international competitions.', year: '2014–2016' },
-    { title: 'Represented India — Classical Kathak', description: "Represented India in classical Kathak dance at international performances.", year: '2012–2014' },
+    { title: 'IIT Madras — SHAastra 2026 × 4', description: '4 certificates: ADI Reverse Engineering, Embedded Programming, E-Contest, Petri Dish Challenge.', year: '2026' },
+    { title: "IIM Kozhikode — Backwaters'26 × 4", description: '4 certificates: IPL Fantasy, Avatar CEO, Kotler Sutra Marketing, Project Horizon GPAI.', year: '2026' },
+    { title: 'IIT Bombay — Techfest 2025 × 2', description: "2 certificates from Asia's largest science and technology festival — CTF cybersecurity + Agrowsera.", year: '2025' },
+    { title: "Campus Ambassador — IIT Delhi eDCon'26", description: "Official Campus Ambassador for IIT Delhi's entrepreneurship and design conclave.", year: '2026' },
+    { title: 'Nestlé YEP Academy × 4 + Nesternship', description: '4 YEP Academy completions (Idea Generation, Solution Creation, Successful Entrepreneur, Food Product Development) + Nestlé Nesternship virtual internship.', year: '2023–2024' },
+    { title: 'National Athlete — Swimming & Kathak', description: 'Represented India internationally in freestyle swimming (2014–2016) and classical Kathak dance (2012–2014).', year: '2012–2016' },
 ];
 
 const ResumePage: React.FC<ResumePageProps> = ({ onBack }) => {
@@ -153,13 +151,11 @@ const ResumePage: React.FC<ResumePageProps> = ({ onBack }) => {
                     >
                         Back
                     </button>
-
                     <div className="flex items-center gap-2">
                         <button onClick={() => setActiveTab('resume')} className={tabButtonClass('resume')}>Resume</button>
                         <button onClick={() => setActiveTab('skills')} className={tabButtonClass('skills')}>Skills</button>
                         <button onClick={() => setActiveTab('achievements')} className={tabButtonClass('achievements')}>Achievements</button>
                     </div>
-
                     <button
                         onClick={() => window.print()}
                         className="px-4 py-2 rounded-md bg-red-600 hover:bg-red-700 text-sm font-semibold"
@@ -171,10 +167,17 @@ const ResumePage: React.FC<ResumePageProps> = ({ onBack }) => {
 
             <div className="max-w-6xl mx-auto px-4 py-8">
                 <section className="mb-8 border border-zinc-800 rounded-2xl p-6 bg-gradient-to-br from-zinc-950 to-black">
-                    <h1 className="text-3xl md:text-5xl font-extrabold bg-gradient-to-r from-white via-zinc-200 to-zinc-400 bg-clip-text text-transparent">
-                        Muskan Challana
-                    </h1>
-                    <p className="mt-2 text-red-500 text-lg md:text-xl font-semibold">{PERSONAL_INFO.title}</p>
+                    <div className="flex flex-wrap items-start justify-between gap-3">
+                        <div>
+                            <h1 className="text-3xl md:text-5xl font-extrabold bg-gradient-to-r from-white via-zinc-200 to-zinc-400 bg-clip-text text-transparent">
+                                Muskan Challana
+                            </h1>
+                            <p className="mt-2 text-red-500 text-lg md:text-xl font-semibold">{PERSONAL_INFO.title}</p>
+                        </div>
+                        <span className="mt-1 px-3 py-1 rounded-full bg-green-900/60 border border-green-700 text-green-300 text-xs font-semibold tracking-wide">
+                            DPIIT Registered · Startup India
+                        </span>
+                    </div>
                     <div className="mt-4 flex flex-wrap gap-4 text-sm text-zinc-300">
                         <a className="hover:text-white" href="mailto:cmuskan2068@gmail.com">cmuskan2068@gmail.com</a>
                         <a className="hover:text-white" href="https://www.linkedin.com/in/muskan-challana-408234163/" target="_blank" rel="noreferrer">LinkedIn</a>

@@ -22,7 +22,7 @@ export const PORTFOLIO_DATA: ContentCategory[] = [
         id: 'nexivo-crm',
         title: 'Nexivo CRM',
         subtitle: 'AI-powered pipeline automation for SMEs — live with paying clients',
-        description: 'Full-stack CRM for Indian manufacturing SMEs. 2,000+ part inventory with OCR bill scanning, bulk CSV/XLS import (400-row batches), Excel/PDF export, Tally import, admin controls, intelligent API caching, automated low-stock email alerts (1st & 15th), supplier price history, stock search, part image gallery, customer & lead tracking, payment reminders, purchase orders, MIS analytics, employee attendance, role-based login, WhatsApp automation. Python + Streamlit + Supabase PostgreSQL + Gmail API. Live in daily production use with 2 paying clients.',
+        description: 'Full-stack CRM for Indian manufacturing SMEs. 2,000+ part inventory with OCR bill scanning, bulk CSV/XLS import (400-row batches), Excel/PDF export, Tally import, admin controls, intelligent API caching, automated low-stock email alerts (1st & 15th), supplier price history, stock search, part image gallery, customer & lead tracking, payment reminders, purchase orders, MIS analytics, employee attendance, role-based login, WhatsApp automation. Python + Streamlit + Supabase PostgreSQL + Gmail API. Live in daily production use with 2 paying clients. Clients: Satyam Tex Fabb, NSC.',
         tags: ['Python', 'Streamlit', 'Supabase', 'Gmail API', 'WhatsApp', 'OCR', 'DPIIT', 'Live'],
         year: '2026',
         link: 'https://github.com/challanamuskan/indian-sme-crm-template',

@@ -40,8 +40,8 @@ const experience: ExperienceItem[] = [
         year: 'Dec 2025–2026',
         color: '#9333ea',
         bullets: [
-            'Delivered a live production CRM for a 30-year-old Jaipur manufacturing business — OCR bill scanning, WhatsApp + email automation, MIS dashboard, role-based login.',
-            'Delivered a B2B product catalogue and lead generation website for a textile machinery parts dealer.',
+            'Delivered a live production CRM for Satyam Tex Fabb — Jaipur textile machinery business. OCR bill scanning, WhatsApp + email automation, MIS dashboard, role-based login.',
+            'Delivered a B2B product catalogue and lead generation website for NSC (National Sales Corporation).',
         ],
     },
     {

@@ -23,19 +23,31 @@ type AchievementItem = {
 
 const experience: ExperienceItem[] = [
     {
-        title: 'Freelance AI Builder',
-        subtitle: 'Independent, Jaipur',
-        year: '2025–Present',
+        title: 'Founder — Nexivo',
+        subtitle: 'DPIIT-Registered Startup · Jaipur, Rajasthan',
+        year: '2026–Present',
         color: '#E50914',
         bullets: [
-            'Key accomplishment: Delivered Satyam Tex Fabb CRM — live at satyam-tex-fabb.streamlit.app',
-            'Features: OCR scanning, WhatsApp + Email automation, MIS, role-based login',
-            'Built using Python, Streamlit, Claude API, Google Sheets API, WhatsApp Business API — iterative AI-assisted development',
+            'Founded Nexivo — B2B AI ops for Indian SMEs. DPIIT-registered under Startup India.',
+            'Products: Nexivo CRM (pipeline + WhatsApp/email automation), Nexivo Audit (AI audit platform, live at audit-nexivo.vercel.app), Nexivo Automate (workflow automation).',
+            '2 paying clients acquired within 3 months of starting from zero coding background.',
+            'Built using Python, Streamlit, Supabase PostgreSQL, Claude API, Gmail OAuth, WhatsApp Business API.',
+        ],
+    },
+    {
+        title: 'Freelance AI Builder',
+        subtitle: 'Independent · Jaipur, Rajasthan',
+        year: '2025–2026',
+        color: '#9333ea',
+        bullets: [
+            'Delivered a live production CRM for a 30-year-old Jaipur manufacturing business — OCR scanning, WhatsApp + email automation, MIS dashboard, role-based login.',
+            'Delivered a B2B product catalogue and lead generation website for a textile machinery parts dealer.',
+            'AI-assisted development using Claude, Cursor, and Gemini — shipped production apps with no prior coding background.',
         ],
     },
     {
         title: 'Sales & Marketing Coordinator',
-        subtitle: 'Lagardère AWPL · Australia',
+        subtitle: 'Lagardère AWPL · Adelaide, Australia',
         year: '2022–2024',
         color: '#2E5BBA',
         bullets: [
@@ -47,60 +59,72 @@ const experience: ExperienceItem[] = [
     },
     {
         title: 'Student Mentor',
-        subtitle: 'University of South Australia',
+        subtitle: 'University of South Australia · Adelaide',
         year: '2022–2024',
         color: '#f59e0b',
-        bullets: ['Mentored 2 years of international students'],
+        bullets: [
+            'Mentored international students through academic, cultural, and personal transitions for 2 years.',
+            'Part of the formal UniSA peer mentoring programme.',
+        ],
     },
 ];
 
 const certifications = [
-    'Nestlé YEP Academy × 4 + Nesternship',
     'McKinsey Forward',
-    'Google Data Analytics',
+    'Nestlé YEP Academy × 4 — Idea Generation, Solution Creation, Successful Entrepreneur, Food Product Development',
+    'Google Data Analytics (Coursera)',
     'Cisco Networking Academy × 7',
+    'HP LIFE × 2 — Data Science & Analytics, AI for Business',
     'GitHub Student Developer Pack',
 ];
 
 const education = [
-    'Sabarmati University — Bachelor of Commerce (Completed)',
+    'Vivekananda Global University — MCA, Master of Computer Applications · Distance · 2026–2028',
+    'Sabarmati University — B.Com, Bachelor of Commerce · Graduated 2025',
 ];
 
 const internationalExposure =
-    'Adelaide, Australia (2022–2024): 2 years of independent living and professional work experience in high-pressure environments across healthcare, hospitality, and corporate sectors.';
+    'Adelaide, Australia (2022–2025): 3 years of independent living and professional work across corporate, hospitality, and education sectors. Returned to India July 2025.';
 
 const skillGroups = [
     {
-        title: 'AI & Vibe Coding',
-        tags: ['Claude', 'Gemini', 'Cursor', 'GitHub Copilot', 'Prompt Engineering'],
+        title: 'AI & LLM',
+        tags: ['Claude API', 'Gemini API', 'OpenAI API', 'RAG Pipelines', 'Multi-Agent Systems', 'Prompt Engineering', 'Vector Search'],
+    },
+    {
+        title: 'Rapid AI Development',
+        tags: ['Claude', 'Cursor', 'GitHub Copilot', 'AI-Assisted Build', 'Vibe Coding'],
+    },
+    {
+        title: 'Languages & Frameworks',
+        tags: ['Python', 'JavaScript', 'TypeScript', 'React', 'Vite', 'Streamlit'],
+    },
+    {
+        title: 'APIs & Infrastructure',
+        tags: ['Supabase PostgreSQL', 'Gmail API (OAuth)', 'WhatsApp Business API', 'Google Sheets API', 'Vercel', 'GitHub'],
     },
     {
         title: 'Data & Analytics',
-        tags: ['Python', 'Streamlit', 'Pandas', 'R', 'SQL', 'Google Sheets API', 'Power BI'],
-    },
-    {
-        title: 'Supply Chain & Ops',
-        tags: ['Inventory Management', 'Procurement Tracking', 'MIS', 'Logistics Analysis'],
+        tags: ['pandas', 'matplotlib', 'Advanced Excel', 'SQL', 'Google Sheets Dashboards', 'MIS Reporting'],
     },
     {
         title: 'Business & Strategy',
-        tags: ['CRM Systems', 'Sales Strategy', 'Case Competitions', 'Marketing'],
-    },
-    {
-        title: 'APIs & Integrations',
-        tags: ['Gmail API', 'WhatsApp automation', 'OCR (Tesseract)', 'Google Cloud'],
+        tags: ['Product Management', 'B2B Client Management', 'SME Operations', 'McKinsey Problem-Solving', 'Startup Development'],
     },
 ];
 
 const achievements: AchievementItem[] = [
-    { title: 'IIT Madras — Shaastra 2026', description: '4 certificates across engineering, AI, operations and entrepreneurship events.', year: '2026' },
-    { title: 'IIM Kozhikode — Backwaters\'26', description: '4 certificates across strategy, marketing, finance and operations events.', year: '2026' },
-    { title: 'IIT Bombay — Techfest 2025', description: '2 certificates from Asia\'s largest science and technology festival.', year: '2025' },
-    { title: 'Campus Ambassador — IIT Delhi eDCon\'26', description: 'Official Campus Ambassador for IIT Delhi\'s entrepreneurship conclave.', year: '2026' },
-    { title: 'McKinsey Forward Certified', description: 'Selective global leadership and structured problem solving program.', year: '2025' },
-    { title: '3rd Place — IIM Rohtak National Competition', description: 'Podium finish at a national competition at India\'s premier management institute.', year: '2025' },
-    { title: 'Represented India — International Swimming', description: 'Twice represented India in freestyle swimming internationally.', year: '2014–2016' },
-    { title: 'Represented India — Classical Kathak', description: 'Twice represented India in classical Kathak dance internationally.', year: '2012–2014' },
+    { title: 'DPIIT-Registered Startup — Nexivo', description: 'Nexivo recognised under DPIIT, Government of India. Startup India benefits, accelerator eligibility.', year: '2026' },
+    { title: 'IIT Madras — SHAastra 2026 × 4', description: '4 certificates: ADI Reverse Engineering, Embedded Programming, E-Contest, Petri Dish Challenge.', year: '2026' },
+    { title: "IIM Kozhikode — Backwaters'26 × 4", description: '4 certificates: IPL Fantasy, Avatar CEO, Kotler Sutra Marketing, Project Horizon GPAI.', year: '2026' },
+    { title: 'IIM Indore — IRIS 2026', description: 'Ashwamesha Legacy Leadership Competition and Finance League: Equity Pitch Challenge.', year: '2026' },
+    { title: "Campus Ambassador — IIT Delhi eDCon'26", description: "Official Campus Ambassador for IIT Delhi's entrepreneurship and design conclave.", year: '2026' },
+    { title: 'McKinsey Forward Certified', description: 'Selective global leadership and structured problem-solving programme by McKinsey & Company.', year: '2025' },
+    { title: '3rd Place — IIM Rohtak National Competition', description: "Podium finish at a national competition at IIM Rohtak — one of India's premier management institutes.", year: '2025' },
+    { title: 'IIT Bombay — Techfest 2025 × 2', description: "2 certificates from Asia's largest science and technology festival: CTF (cybersecurity) + Agrowsera.", year: '2025' },
+    { title: '83 Competition Certificates — Unstop', description: 'Verified participation across IIT/IIM hackathons, case studies, data challenges, startup pitches.', year: '2025–2026' },
+    { title: 'Represented India — Freestyle Swimming', description: 'National-level competitive athlete. Represented India at international competitions.', year: '2014–2016' },
+    { title: 'Represented India — Classical Kathak', description: "Represented India in classical Kathak dance at international performances.", year: '2012–2014' },
 ];
 
 const ResumePage: React.FC<ResumePageProps> = ({ onBack }) => {
@@ -155,6 +179,7 @@ const ResumePage: React.FC<ResumePageProps> = ({ onBack }) => {
                         <a className="hover:text-white" href="mailto:cmuskan2068@gmail.com">cmuskan2068@gmail.com</a>
                         <a className="hover:text-white" href="https://www.linkedin.com/in/muskan-challana-408234163/" target="_blank" rel="noreferrer">LinkedIn</a>
                         <a className="hover:text-white" href="https://github.com/challanamuskan" target="_blank" rel="noreferrer">GitHub</a>
+                        <a className="hover:text-white" href="https://audit-nexivo.vercel.app" target="_blank" rel="noreferrer">audit-nexivo.vercel.app</a>
                         <span>Jaipur, India</span>
                     </div>
                 </section>
